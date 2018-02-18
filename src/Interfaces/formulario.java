@@ -48,6 +48,7 @@ import java.sql.Statement;
 public class formulario extends javax.swing.JFrame {
 
     LDesague logica = new LDesague();
+    
     LAlcantarillado logica2 = new LAlcantarillado();
     DatosAlcantarillado dts2 = new DatosAlcantarillado();
     DatosDesague dts = new DatosDesague();
@@ -63,7 +64,7 @@ public class formulario extends javax.swing.JFrame {
         jComboFiltrarTipo.setSelectedIndex(1);
         AutoCompleteDecorator.decorate(jComboUrbanizacion);
         rellenarCodigoCat();
-        
+        System.out.println("Usted ingresó al sistema exitosamente! :)");
         jButtonEditar.setEnabled(false);
         jButtonEliminar.setEnabled(false);
         jButtonImprimir.setEnabled(false);
