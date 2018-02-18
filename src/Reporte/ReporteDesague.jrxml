@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9b5515f-7ce8-40a5-b965-cf22d5312acd">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="id" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[Select * from desague where id = $P{id}]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="num_autorizacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="proyecto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="expediente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reciboCaja" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="urbanizacion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dni" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="manzana" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lote" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="fecha_1" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$F{fecha}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="19" y="-1" width="528" height="21" uuid="49743f5e-34f5-4510-b6a7-91174c2dfc0c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MUNICIPALIDAD PROVINCIAL ESPINAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="528" height="15" uuid="94ade6c2-ead7-4d43-80ff-efc2d72cdaf9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[UNIDAD DE SERVICIOS DE AGUA POTABLE Y ALCANTARILLADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="33" width="528" height="21" uuid="3285840d-c787-4012-970d-ce71ebd0ea7d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[USAPAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="19" y="54" width="528" height="15" uuid="0c144ca8-4f04-4787-92ea-3fbbbb1a230b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Monotype Corsiva" size="12"/>
+				</textElement>
+				<text><![CDATA[“Año del Dialogo y la Reconciliación Nacional”]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="35" y="76" width="512" height="2" backcolor="#993300" uuid="823642d2-1a9d-4582-81ea-dd84d6c70311"/>
+			</rectangle>
+			<line>
+				<reportElement x="35" y="73" width="512" height="1" uuid="7f32b4d6-0a17-4a64-a72c-37a2a0dade42"/>
+			</line>
+			<image scaleImage="FillFrame">
+				<reportElement x="37" y="0" width="67" height="69" uuid="ff644345-4a79-4106-88fd-792a74619ed2"/>
+				<imageExpression><![CDATA["C:\\Imagenes sistema municipal\\primero.jpg"]]></imageExpression>
+			</image>
+			<image scaleImage="FillFrame">
+				<reportElement x="468" y="0" width="79" height="69" uuid="4c226d84-e9fd-4ec4-bfd5-29b87cb777a1"/>
+				<imageExpression><![CDATA["C:\\Imagenes sistema municipal\\logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="144" y="0" width="152" height="30" uuid="360290d1-36cd-4ab8-9f36-23f4072f94ab"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[AUTORIZACIÓN N° ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="20" width="533" height="15" uuid="fea7b4ea-206f-4f34-89d1-5ddc61dbe70b"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[La Unidad Operativa de Servicios de Agua Potable y Alcantarillado USAPAL, de la Municipalidad Provincial de Espinar:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="34" width="129" height="17" uuid="a19d2443-a591-4c83-885d-01c059d0daab"/>
+				<textElement>
+					<font fontName="Arial Black" isBold="true"/>
+				</textElement>
+				<text><![CDATA[AUTORIZA: Sr.(a):]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="34" width="368" height="17" uuid="201c358b-1b01-4fe2-acdc-e426ba9c0e15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="168" height="30" uuid="c8e166f7-3c09-424c-9044-a5ac5fac0ed4"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="18" isBold="true" isUnderline="true" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_autorizacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="0" width="75" height="30" uuid="d03a0477-4fbc-422a-aa72-2d2c12f0e989"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="18" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="319" y="0" width="25" height="30" uuid="a1bdcfd2-2a20-446d-a753-de0b66aa2e4c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Narrow" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[--]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="659" splitType="Stretch">
+			<staticText>
+				<reportElement x="37" y="0" width="100" height="15" uuid="25357d42-6898-4a56-8444-31218ffe61d9"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[Para la ejecucion de ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="0" width="161" height="15" uuid="3e74a4e4-7475-4039-95c9-2f4eb139c8cc"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[bajo las siguientes consideraciones]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="15" width="108" height="20" uuid="995152cd-5a51-4439-a3e2-8567196c1d76"/>
+				<textElement>
+					<font fontName="Arial Black" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[REFERENCIA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="35" width="118" height="20" uuid="7e4fc674-a598-4e1c-864f-04e6b0e6095a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Expediente N°          :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="75" width="118" height="20" uuid="dbf4782e-10be-44d3-bb25-659d7bffce2a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Codigo CAT.           :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="55" width="118" height="20" uuid="10e31465-79c1-4512-873a-696c5b57df66"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Recibo en Caja N°    :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="95" width="118" height="20" uuid="f679ab02-bb8f-457d-b53a-0e7310d8f073"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Direccion                 :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="127" width="118" height="20" uuid="596c5f31-2feb-49b8-b7a0-3a6933c59004"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Urbanizacion           :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="155" y="35" width="100" height="20" uuid="8b105c78-1893-403d-b878-d0b38b559636"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{expediente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="55" width="149" height="20" uuid="c40473a2-c714-451d-b302-933fe8b7396d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reciboCaja}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="75" width="254" height="20" uuid="00bec8a4-a25e-4c92-9a5b-332c7936bd72"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoCat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="95" width="379" height="32" uuid="f939bdb8-ae4f-44c0-ba38-953303fb5449"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="127" width="379" height="20" uuid="237d2ed7-132d-4837-b45f-7d656b57697a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{urbanizacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="121" y="147" width="24" height="20" uuid="d8f2d998-aaea-4fe0-a4ed-5f17982d6ee0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[MZ.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="156" y="147" width="100" height="20" uuid="6916acd8-5472-4d2e-bca6-dd4c933b9a5a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manzana}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="292" y="147" width="48" height="20" uuid="03820bfb-2884-4bde-813c-b581a84f96d1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[LOTE:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="344" y="147" width="100" height="20" uuid="fb86815f-35cf-472e-bccc-02c0c3565bcb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lote}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="37" y="167" width="69" height="18" uuid="bbb020bb-fc3a-4bac-a9cc-204b2938a07c"/>
+				<textElement>
+					<font fontName="Arial Black" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[USAPAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="167" width="369" height="18" uuid="f5e5f915-109f-4e45-90b9-c4a6d2913137"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[Ejecutara los siguientes trabajos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="185" width="406" height="57" uuid="644888ec-8dd6-4248-817f-7034092bed45"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[=>  Marcado para la excavación de Zanjas.
+=> Listado de materiales de accesorios para la instalación.                                                                                                                          => Conexión de ambos servicios de tuberia matriz hasta la caja de registro.
+=> Prueba de funcionamiento del servicio instalado.                                                                                                                                                                                                                                                                                                                                    ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="242" width="108" height="18" uuid="c4da0d17-70cd-4542-a6e6-6605452dadcd"/>
+				<textElement>
+					<font fontName="Arial Black" size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[EL USUARIO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="242" width="369" height="18" uuid="d66d4da8-7f44-4682-8569-2458c02daf90"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[Cumplira con ejecutar:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="260" width="477" height="71" uuid="88e4fef2-44ee-4db5-beb3-c74c1b38c20b"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[=>  Excavacion de zanjas en un plazo de 03 dias habiles despues de la autorizacion.
+=> Adquisicion de materiales de accesorios solicitado por USUPAL.                                                                                                                                              => Preparado de materiales (cama) para encubrimiento de tuberias.
+=> Tapado de compactado de las Zanjas.                                                                                                                                                                                                                                                                                                                                                                                                                                 => Limpieza de la via publicadonde se realizo el trabajo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="332" width="479" height="15" uuid="ee100002-2ec2-4884-a4de-3d1d31829c90"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[Conforme a la ley de Saneamiento, nuestros servicios estan condicionados a lo que detallamos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="347" width="479" height="29" uuid="811c3f82-8b26-4d22-a425-17844a766663"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[1. Los clientes que cuentan con los servicios de agua potable y alcantarillado están obligados a contar con cajas de registro de control de agua y desagüe y accesorios originales exigidos por USAPAL.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="376" width="479" height="29" uuid="589e9213-d0d6-468f-aecc-509b1187ac9b"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[2. Los recibos deberán ser cancelados mensualmente en caja de la Municipalidad Provincial de Espinar, dentro del plazo señalado como último día de pago precisado en el recibo.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="405" width="479" height="44" uuid="03a39217-9927-4b81-98ac-9cbd40cca697"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[3. Vencido el plazo y no habiendo cancelado su recibo, se procederá a cobrar los intereses y moras correspondientes. El incumplimiento de pago acumulado de 02 meses implicará el corte de servicio automático sin previo aviso. El cliente asumirá el pago de los derechos de rehabilitación. (Art. 71 de la R.S.Nº 006-90VC-1200).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="449" width="479" height="29" uuid="a816fde5-37b0-4141-83c2-54a96d96c6c2"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[4. La utilización de los servicios de agua potable en forma ilícita será denunciada penalmente y sancionada conforme al Artículo 185 del Código Penal.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="478" width="479" height="17" uuid="41b4c558-22d1-4a7b-b85f-d06c4eacd46b"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[5. Todo reclamo será atendido en nuestras oficinas del USAPAL de la Municipalidad Provincial de Espinar.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="495" width="252" height="15" uuid="d9f17f84-e583-4c27-a32b-f902dbe6e425"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12"/>
+				</textElement>
+				<text><![CDATA[6.Usuario que no haga uso del servicio de agua potable,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="495" width="237" height="15" uuid="accb26e6-b673-4d11-ac58-8a21c1e1362b"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ES SU RESPONSABILIDAD SOLICITAR CORTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="510" width="237" height="15" uuid="7acb4bb7-1570-4a15-8e1d-83566ee65150"/>
+				<textElement>
+					<font fontName="Arial Narrow" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TEMPORAL.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="38" y="525" width="137" height="17" uuid="c2f141d2-8983-40d4-b9d4-57b2b9562885"/>
+				<textElement>
+					<font fontName="Arial Black" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[OBSERVACIONES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="525" width="437" height="17" uuid="ab37e7c8-a59c-4516-9d72-81622448fe8f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Perpetua Titling MT" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EL USUARIO CUMPLIRÁ CON LA ADQUISICIÓN DE LOS MATERIALES.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="143" y="147" width="13" height="20" uuid="0efb6280-57b5-479f-8eaa-dca413c4f2c0"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA["]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="147" width="13" height="20" uuid="2d325c99-260b-42c0-b652-ef5709717d38"/>
+				<text><![CDATA["]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="147" width="13" height="20" uuid="23bd8ff8-0029-45b9-8b9b-45ec3596765f"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA["]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="147" width="13" height="20" uuid="37475828-cd75-4dd5-a0bc-07670d1641c6"/>
+				<text><![CDATA["]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="275" y="544" width="52" height="61" uuid="e50d38fb-9957-4f06-b798-bbbf4c9f48b6"/>
+				<graphicElement>
+					<pen lineWidth="5.0" lineStyle="Double"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="38" y="578" width="218" height="16" uuid="fc16a3e3-1cf2-4b99-90de-d575d48edf73"/>
+				<textElement>
+					<font fontName="Arial Black" size="11"/>
+				</textElement>
+				<text><![CDATA[........................................................]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="37" y="594" width="219" height="20" uuid="60a12934-0a97-4a14-bb7a-05e1c71cff23"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="38" y="614" width="37" height="20" uuid="5b70c72d-069e-4895-9c81-5ea0e76eea94"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI N°:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="75" y="614" width="181" height="20" uuid="320698e6-969f-4dc7-b524-6a1e1cf1af32"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="256" y="605" width="88" height="20" uuid="9b3d208a-55f7-4218-a303-d2686f199c63"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Huella digital]]></text>
+			</staticText>
+			<line>
+				<reportElement x="35" y="634" width="499" height="1" uuid="30729113-78b9-4a35-9160-1f4475d30e29"/>
+			</line>
+			<staticText>
+				<reportElement x="38" y="637" width="498" height="12" uuid="161361dd-5d35-4910-911a-aec8bc8d30dc"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plaza de Armas N° 101, Espinar – Cusco – Central (+51)084-301272]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="647" width="460" height="12" uuid="a9c6e187-7835-4f06-beec-a0d8eb9ec3d7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Web: http://www.muniespinar.gob.pe / E-mail: municipalidad@muniespinar.gob.pe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="429" y="605" width="88" height="20" uuid="542043a7-fe9f-4553-8e15-fc7874729419"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[USAPAL M.P.E.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="137" y="0" width="248" height="20" uuid="a40e8946-e2a9-4cf4-8394-3213b2ee5da7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{proyecto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
