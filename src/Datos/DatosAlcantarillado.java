@@ -27,6 +27,15 @@ public class DatosAlcantarillado {
     private String lote;
     private String estado;
     private String vecesInstalacion;
+    private String tiempoVigencia;
+
+    public String getTiempoVigencia() {
+        return tiempoVigencia;
+    }
+
+    public void setTiempoVigencia(String tiempoVigencia) {
+        this.tiempoVigencia = tiempoVigencia;
+    }
 
     public String getVecesInstalacion() {
         return vecesInstalacion;

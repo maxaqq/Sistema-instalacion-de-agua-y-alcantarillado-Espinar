@@ -267,7 +267,8 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("SEGUNDA");
-
+                        dts2.setTiempoVigencia(tiempoVigencia());
+                        
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
                         jLabelID.setText(logica2.ultimoId()+"");
@@ -313,6 +314,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("TERCERA");
+                        dts2.setTiempoVigencia(tiempoVigencia());
 
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
@@ -345,7 +347,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setDireccion(jTextDireccion.getText().toUpperCase());
                         dts2.setUrbanizacion(jComboUrbanizacion.getSelectedItem().toString().toUpperCase());
                         dts2.setDni(jTextDNI.getText());
-
+                     
                         Calendar cal;
                         int day,month,year;
 
@@ -359,6 +361,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("CUARTA");
+                        dts2.setTiempoVigencia(tiempoVigencia());
 
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
@@ -403,6 +406,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("PRIMERA");
+                        dts2.setTiempoVigencia(tiempoVigencia());
 
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
@@ -496,7 +500,8 @@ public class formulario extends javax.swing.JFrame {
             dts2.setManzana(jTextManzana.getText().toUpperCase());
             dts2.setLote(jTextLote.getText().toUpperCase());
             dts2.setEstado(jComboEstado.getSelectedItem().toString());
-            dts2.setVecesInstalacion("PRIMERA");
+            dts2.setVecesInstalacion(logica2.cantidadInstalaciones(jTextCodigoCat.getText()));
+            dts2.setTiempoVigencia(tiempoVigencia());
             
        
             if (logica2.editar(dts2)) {
@@ -512,7 +517,7 @@ public class formulario extends javax.swing.JFrame {
                 jButtonAgregar.setEnabled(true);
 
             }else{
-                System.out.println("No se puedo editar");   
+                System.out.println("No se pudo editar");   
             }
     }
     public void mostrarDesague(String buscar){
@@ -602,6 +607,60 @@ public class formulario extends javax.swing.JFrame {
         }
         
         
+    }
+    
+    public String tiempoVigencia(){
+        Calendar calendario;
+        
+        int año = 0;
+        String month = "";
+        int mes =0;
+        String mensaje = "";
+
+        calendario = jDateFecha.getCalendar();
+        mes = calendario.get(Calendar.MONTH);
+        año = calendario.get(Calendar.YEAR);
+        
+        /*SimpleDateFormat dateMes = new SimpleDateFormat("MM");
+        SimpleDateFormat dateAño = new SimpleDateFormat("yyyy");
+        
+
+         mes = Integer.parseInt(dateMes.format(jDateFecha.getCalendar()));
+         año = Integer.parseInt(dateAño.format(jDateFecha.getCalendar()));*/
+        
+        switch(mes+1){
+                case 1: month = "junio";
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 2: month = "julio";
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 3: month = "agosto";
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 4: month = "setiembre";
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 5: month = "octubre";
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 06: month = "noviembre";
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 07: month = "diciembre";
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 8: month = "enero";
+                            año++;
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 9: month = "febrero";
+                        año++;
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 10: month = "marzo";
+                        año++;
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 11: month = "abril";
+                        año++;
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                case 12: month = "mayo";
+                        año++;
+                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+             }
+        
+        return mensaje;
     }
    
     @SuppressWarnings("unchecked")

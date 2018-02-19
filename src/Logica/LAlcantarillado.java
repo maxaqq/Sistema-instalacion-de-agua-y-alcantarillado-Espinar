@@ -13,7 +13,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -29,8 +28,8 @@ public class LAlcantarillado {
     public boolean guardar(DatosAlcantarillado dts){
         SQL = "insert into alcantarillado (id,num_autorizacion,proyecto,nombre,expediente,"
                 + "reciboCaja,codigoCat,direccion,urbanizacion,dni,fecha,manzana,"
-                + "lote,estado, veces_de_instalacion) "
-                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "lote,estado, veces_de_instalacion,tiempoVigencia) "
+                + "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         
         try {
             PreparedStatement pst = conectado.prepareStatement(SQL);
@@ -50,6 +49,7 @@ public class LAlcantarillado {
             pst.setString(13, dts.getLote());
             pst.setString(14, dts.getEstado());
             pst.setString(15, dts.getVecesInstalacion());
+            pst.setString(16, dts.getTiempoVigencia());
             
             int n = pst.executeUpdate();
             if (n != 0) {
@@ -108,7 +108,8 @@ public class LAlcantarillado {
     public boolean editar (DatosAlcantarillado dts){
        SQL = "update alcantarillado SET id=?, proyecto=?,nombre=?,"
                + "expediente=?,reciboCaja=?,codigoCat=?,direccion=?,"
-               + "urbanizacion=?,dni=?,fecha=?,manzana=?,lote=?,estado=?, veces_de_instalacion=?"
+               + "urbanizacion=?,dni=?,fecha=?,manzana=?,lote=?,estado=?, "
+               + "veces_de_instalacion=?, tiempoVigencia=?"
                + " where num_autorizacion=?"; 
         try {
             PreparedStatement pst = conectado.prepareStatement(SQL);
@@ -127,7 +128,8 @@ public class LAlcantarillado {
             pst.setString(12, dts.getLote());
             pst.setString(13, dts.getEstado());
             pst.setString(14, dts.getVecesInstalacion());
-            pst.setString(15, dts.getNum_autorizacion());
+            pst.setString(15, dts.getTiempoVigencia());
+            pst.setString(16, dts.getNum_autorizacion());
             
             
             int n = pst.executeUpdate();
