@@ -26,6 +26,15 @@ public class DatosDesague {
     private String manzana;
     private String lote;
     private String estado;
+    private String tiempoVigencia;
+
+    public String getTiempoVigencia() {
+        return tiempoVigencia;
+    }
+
+    public void setTiempoVigencia(String tiempoVigencia) {
+        this.tiempoVigencia = tiempoVigencia;
+    }
     
 
 

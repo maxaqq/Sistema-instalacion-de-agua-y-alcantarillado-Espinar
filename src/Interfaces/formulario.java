@@ -216,6 +216,7 @@ public class formulario extends javax.swing.JFrame {
             dts.setManzana(jTextManzana.getText().toUpperCase());
             dts.setLote(jTextLote.getText().toUpperCase());
             dts.setEstado(jComboEstado.getSelectedItem().toString());
+            dts.setTiempoVigencia(tiempoVigencia().toUpperCase());
             
             if (logica.guardar(dts)) {
                 JOptionPane.showMessageDialog(null, "Se guardo exitosamente");
@@ -267,7 +268,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("SEGUNDA");
-                        dts2.setTiempoVigencia(tiempoVigencia());
+                        dts2.setTiempoVigencia(tiempoVigencia().toUpperCase());
                         
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
@@ -314,7 +315,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("TERCERA");
-                        dts2.setTiempoVigencia(tiempoVigencia());
+                        dts2.setTiempoVigencia(tiempoVigencia().toUpperCase());
 
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
@@ -361,7 +362,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("CUARTA");
-                        dts2.setTiempoVigencia(tiempoVigencia());
+                        dts2.setTiempoVigencia(tiempoVigencia().toUpperCase());
 
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
@@ -406,7 +407,7 @@ public class formulario extends javax.swing.JFrame {
                         dts2.setLote(jTextLote.getText());
                         dts2.setEstado(jComboEstado.getSelectedItem().toString());
                         dts2.setVecesInstalacion("PRIMERA");
-                        dts2.setTiempoVigencia(tiempoVigencia());
+                        dts2.setTiempoVigencia(tiempoVigencia().toUpperCase());
 
                         jLabelNumAutorizacion.setText(logica2.numeroAutorizacion());
                         ocultarColumna();
@@ -456,6 +457,7 @@ public class formulario extends javax.swing.JFrame {
             dts.setManzana(jTextManzana.getText().toUpperCase());
             dts.setLote(jTextLote.getText().toUpperCase());
             dts.setEstado(jComboEstado.getSelectedItem().toString());
+            dts.setTiempoVigencia(tiempoVigencia().toUpperCase());
             
        
             if (logica.editar(dts)) {
@@ -501,7 +503,7 @@ public class formulario extends javax.swing.JFrame {
             dts2.setLote(jTextLote.getText().toUpperCase());
             dts2.setEstado(jComboEstado.getSelectedItem().toString());
             dts2.setVecesInstalacion(logica2.cantidadInstalaciones(jTextCodigoCat.getText()));
-            dts2.setTiempoVigencia(tiempoVigencia());
+            dts2.setTiempoVigencia(tiempoVigencia().toUpperCase());
             
        
             if (logica2.editar(dts2)) {
@@ -620,13 +622,6 @@ public class formulario extends javax.swing.JFrame {
         calendario = jDateFecha.getCalendar();
         mes = calendario.get(Calendar.MONTH);
         año = calendario.get(Calendar.YEAR);
-        
-        /*SimpleDateFormat dateMes = new SimpleDateFormat("MM");
-        SimpleDateFormat dateAño = new SimpleDateFormat("yyyy");
-        
-
-         mes = Integer.parseInt(dateMes.format(jDateFecha.getCalendar()));
-         año = Integer.parseInt(dateAño.format(jDateFecha.getCalendar()));*/
         
         switch(mes+1){
                 case 1: month = "junio";

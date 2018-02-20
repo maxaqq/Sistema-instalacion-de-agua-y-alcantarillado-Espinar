@@ -27,8 +27,8 @@ public class LDesague {
     public boolean guardar(DatosDesague dts){
         SQL = "insert into desague (id,num_autorizacion,proyecto,nombre,expediente,"
                 + "reciboCaja,codigoCat,direccion,urbanizacion,dni,fecha,manzana,"
-                + "lote,estado)"
-                + " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "lote,estado,tiempoVigencia)"
+                + " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         
         try {
             PreparedStatement pst = conectado.prepareStatement(SQL);
@@ -47,6 +47,7 @@ public class LDesague {
             pst.setString(12, dts.getManzana());
             pst.setString(13, dts.getLote());
             pst.setString(14, dts.getEstado());
+            pst.setString(15, dts.getTiempoVigencia());
             
             
             int n = pst.executeUpdate();
@@ -105,7 +106,8 @@ public class LDesague {
     public boolean editar (DatosDesague dts){
        SQL = "update desague SET id=?, proyecto=?,nombre=?,"
                + "expediente=?,reciboCaja=?,codigoCat=?,direccion=?,"
-               + "urbanizacion=?,dni=?,fecha=?,manzana=?,lote=?,estado=? where num_autorizacion=?"; 
+               + "urbanizacion=?,dni=?,fecha=?,manzana=?,lote=?,estado=?, tiempoVigencia=?"
+               + " where num_autorizacion=?"; 
         try {
             PreparedStatement pst = conectado.prepareStatement(SQL);
             
@@ -122,7 +124,8 @@ public class LDesague {
             pst.setString(11, dts.getManzana());
             pst.setString(12, dts.getLote());
             pst.setString(13, dts.getEstado());
-            pst.setString(14, dts.getNum_autorizacion());
+            pst.setString(14, dts.getTiempoVigencia());
+            pst.setString(15, dts.getNum_autorizacion());
             
             
             int n = pst.executeUpdate();

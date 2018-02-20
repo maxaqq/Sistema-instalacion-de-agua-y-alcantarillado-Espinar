@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9b5515f-7ce8-40a5-b965-cf22d5312acd">
-	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.zoom" value="1.3636363636363635"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="610"/>
 	<parameter name="id" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[Select * from desague where id = $P{id}]]>
@@ -47,6 +47,9 @@
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<field name="estado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tiempoVigencia" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
 	<variable name="fecha_1" class="java.lang.Integer" resetType="Page" calculation="Count">
@@ -248,49 +251,49 @@
 				<textFieldExpression><![CDATA[$F{urbanizacion}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="121" y="147" width="24" height="20" uuid="d8f2d998-aaea-4fe0-a4ed-5f17982d6ee0"/>
+				<reportElement x="284" y="35" width="24" height="20" uuid="d8f2d998-aaea-4fe0-a4ed-5f17982d6ee0"/>
 				<textElement>
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
 				<text><![CDATA[MZ.]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="156" y="147" width="100" height="20" uuid="6916acd8-5472-4d2e-bca6-dd4c933b9a5a"/>
+				<reportElement x="319" y="35" width="100" height="20" uuid="6916acd8-5472-4d2e-bca6-dd4c933b9a5a"/>
 				<textElement>
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{manzana}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="292" y="147" width="48" height="20" uuid="03820bfb-2884-4bde-813c-b581a84f96d1"/>
+				<reportElement x="411" y="35" width="48" height="20" uuid="03820bfb-2884-4bde-813c-b581a84f96d1"/>
 				<textElement>
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
 				<text><![CDATA[LOTE:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="344" y="147" width="100" height="20" uuid="fb86815f-35cf-472e-bccc-02c0c3565bcb"/>
+				<reportElement x="463" y="35" width="100" height="20" uuid="fb86815f-35cf-472e-bccc-02c0c3565bcb"/>
 				<textElement>
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lote}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="37" y="167" width="69" height="18" uuid="bbb020bb-fc3a-4bac-a9cc-204b2938a07c"/>
+				<reportElement x="37" y="143" width="69" height="18" uuid="bbb020bb-fc3a-4bac-a9cc-204b2938a07c"/>
 				<textElement>
 					<font fontName="Arial Black" size="12" isBold="true" isUnderline="true"/>
 				</textElement>
 				<text><![CDATA[USAPAL:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="106" y="167" width="369" height="18" uuid="f5e5f915-109f-4e45-90b9-c4a6d2913137"/>
+				<reportElement x="106" y="143" width="369" height="18" uuid="f5e5f915-109f-4e45-90b9-c4a6d2913137"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[Ejecutara los siguientes trabajos:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="57" y="185" width="406" height="57" uuid="644888ec-8dd6-4248-817f-7034092bed45"/>
+				<reportElement x="57" y="161" width="406" height="57" uuid="644888ec-8dd6-4248-817f-7034092bed45"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
@@ -299,21 +302,21 @@
 => Prueba de funcionamiento del servicio instalado.                                                                                                                                                                                                                                                                                                                                    ]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="37" y="242" width="108" height="18" uuid="c4da0d17-70cd-4542-a6e6-6605452dadcd"/>
+				<reportElement x="37" y="218" width="108" height="18" uuid="c4da0d17-70cd-4542-a6e6-6605452dadcd"/>
 				<textElement>
 					<font fontName="Arial Black" size="12" isBold="true" isUnderline="true"/>
 				</textElement>
 				<text><![CDATA[EL USUARIO:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="143" y="242" width="369" height="18" uuid="d66d4da8-7f44-4682-8569-2458c02daf90"/>
+				<reportElement x="143" y="218" width="369" height="18" uuid="d66d4da8-7f44-4682-8569-2458c02daf90"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[Cumplira con ejecutar:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="57" y="260" width="477" height="71" uuid="88e4fef2-44ee-4db5-beb3-c74c1b38c20b"/>
+				<reportElement x="57" y="236" width="477" height="71" uuid="88e4fef2-44ee-4db5-beb3-c74c1b38c20b"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
@@ -322,98 +325,98 @@
 => Tapado de compactado de las Zanjas.                                                                                                                                                                                                                                                                                                                                                                                                                                 => Limpieza de la via publicadonde se realizo el trabajo]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="332" width="479" height="15" uuid="ee100002-2ec2-4884-a4de-3d1d31829c90"/>
+				<reportElement x="38" y="308" width="479" height="15" uuid="ee100002-2ec2-4884-a4de-3d1d31829c90"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[Conforme a la ley de Saneamiento, nuestros servicios estan condicionados a lo que detallamos:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="347" width="479" height="29" uuid="811c3f82-8b26-4d22-a425-17844a766663"/>
+				<reportElement x="38" y="323" width="479" height="29" uuid="811c3f82-8b26-4d22-a425-17844a766663"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[1. Los clientes que cuentan con los servicios de agua potable y alcantarillado están obligados a contar con cajas de registro de control de agua y desagüe y accesorios originales exigidos por USAPAL.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="376" width="479" height="29" uuid="589e9213-d0d6-468f-aecc-509b1187ac9b"/>
+				<reportElement x="38" y="352" width="479" height="29" uuid="589e9213-d0d6-468f-aecc-509b1187ac9b"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[2. Los recibos deberán ser cancelados mensualmente en caja de la Municipalidad Provincial de Espinar, dentro del plazo señalado como último día de pago precisado en el recibo.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="405" width="479" height="44" uuid="03a39217-9927-4b81-98ac-9cbd40cca697"/>
+				<reportElement x="38" y="381" width="479" height="44" uuid="03a39217-9927-4b81-98ac-9cbd40cca697"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[3. Vencido el plazo y no habiendo cancelado su recibo, se procederá a cobrar los intereses y moras correspondientes. El incumplimiento de pago acumulado de 02 meses implicará el corte de servicio automático sin previo aviso. El cliente asumirá el pago de los derechos de rehabilitación. (Art. 71 de la R.S.Nº 006-90VC-1200).]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="449" width="479" height="29" uuid="a816fde5-37b0-4141-83c2-54a96d96c6c2"/>
+				<reportElement x="38" y="425" width="479" height="29" uuid="a816fde5-37b0-4141-83c2-54a96d96c6c2"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[4. La utilización de los servicios de agua potable en forma ilícita será denunciada penalmente y sancionada conforme al Artículo 185 del Código Penal.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="478" width="479" height="17" uuid="41b4c558-22d1-4a7b-b85f-d06c4eacd46b"/>
+				<reportElement x="38" y="454" width="479" height="17" uuid="41b4c558-22d1-4a7b-b85f-d06c4eacd46b"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[5. Todo reclamo será atendido en nuestras oficinas del USAPAL de la Municipalidad Provincial de Espinar.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="495" width="252" height="15" uuid="d9f17f84-e583-4c27-a32b-f902dbe6e425"/>
+				<reportElement x="38" y="471" width="252" height="15" uuid="d9f17f84-e583-4c27-a32b-f902dbe6e425"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
 				<text><![CDATA[6.Usuario que no haga uso del servicio de agua potable,]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="288" y="495" width="237" height="15" uuid="accb26e6-b673-4d11-ac58-8a21c1e1362b"/>
+				<reportElement x="288" y="471" width="237" height="15" uuid="accb26e6-b673-4d11-ac58-8a21c1e1362b"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[ES SU RESPONSABILIDAD SOLICITAR CORTE]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="37" y="510" width="237" height="15" uuid="7acb4bb7-1570-4a15-8e1d-83566ee65150"/>
+				<reportElement x="37" y="486" width="237" height="15" uuid="7acb4bb7-1570-4a15-8e1d-83566ee65150"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[TEMPORAL.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="525" width="137" height="17" uuid="c2f141d2-8983-40d4-b9d4-57b2b9562885"/>
+				<reportElement x="38" y="501" width="137" height="17" uuid="c2f141d2-8983-40d4-b9d4-57b2b9562885"/>
 				<textElement>
 					<font fontName="Arial Black" size="12" isBold="true" isUnderline="false"/>
 				</textElement>
 				<text><![CDATA[OBSERVACIONES:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="175" y="525" width="437" height="17" uuid="ab37e7c8-a59c-4516-9d72-81622448fe8f"/>
+				<reportElement x="175" y="501" width="437" height="17" uuid="ab37e7c8-a59c-4516-9d72-81622448fe8f"/>
 				<textElement verticalAlignment="Middle">
 					<font fontName="Perpetua Titling MT" size="10" isBold="true"/>
 				</textElement>
 				<text><![CDATA[EL USUARIO CUMPLIRÁ CON LA ADQUISICIÓN DE LOS MATERIALES.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="143" y="147" width="13" height="20" uuid="0efb6280-57b5-479f-8eaa-dca413c4f2c0"/>
+				<reportElement x="306" y="35" width="13" height="20" uuid="0efb6280-57b5-479f-8eaa-dca413c4f2c0"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA["]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="187" y="147" width="13" height="20" uuid="2d325c99-260b-42c0-b652-ef5709717d38"/>
+				<reportElement x="350" y="35" width="13" height="20" uuid="2d325c99-260b-42c0-b652-ef5709717d38"/>
 				<text><![CDATA["]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="327" y="147" width="13" height="20" uuid="23bd8ff8-0029-45b9-8b9b-45ec3596765f"/>
+				<reportElement x="446" y="35" width="13" height="20" uuid="23bd8ff8-0029-45b9-8b9b-45ec3596765f"/>
 				<textElement textAlignment="Right"/>
 				<text><![CDATA["]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="372" y="147" width="13" height="20" uuid="37475828-cd75-4dd5-a0bc-07670d1641c6"/>
+				<reportElement x="491" y="35" width="13" height="20" uuid="37475828-cd75-4dd5-a0bc-07670d1641c6"/>
 				<text><![CDATA["]]></text>
 			</staticText>
 			<rectangle radius="10">
@@ -451,7 +454,7 @@
 				<textFieldExpression><![CDATA[$F{dni}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="256" y="605" width="88" height="20" uuid="9b3d208a-55f7-4218-a303-d2686f199c63"/>
+				<reportElement x="256" y="610" width="88" height="20" uuid="9b3d208a-55f7-4218-a303-d2686f199c63"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
@@ -475,7 +478,7 @@
 				<text><![CDATA[Web: http://www.muniespinar.gob.pe / E-mail: municipalidad@muniespinar.gob.pe]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="429" y="605" width="88" height="20" uuid="542043a7-fe9f-4553-8e15-fc7874729419"/>
+				<reportElement x="387" y="605" width="88" height="20" uuid="542043a7-fe9f-4553-8e15-fc7874729419"/>
 				<textElement textAlignment="Center">
 					<font isBold="true"/>
 				</textElement>
@@ -487,6 +490,13 @@
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{proyecto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="518" width="273" height="20" uuid="2cb4fc24-ce7a-4650-96a8-3b414d6fcbf7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tiempoVigencia}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
