@@ -625,34 +625,34 @@ public class formulario extends javax.swing.JFrame {
         
         switch(mes+1){
                 case 1: month = "junio";
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 2: month = "julio";
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 3: month = "agosto";
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 4: month = "setiembre";
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 5: month = "octubre";
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 06: month = "noviembre";
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 07: month = "diciembre";
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 8: month = "enero";
                             año++;
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 9: month = "febrero";
                         año++;
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 10: month = "marzo";
                         año++;
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 11: month = "abril";
                         año++;
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
                 case 12: month = "mayo";
                         año++;
-                         mensaje = "Vigente hasta "+month+" del "+ año; break;
+                         mensaje = "Autorización Vigente hasta "+month+" del "+ año; break;
              }
         
         return mensaje;

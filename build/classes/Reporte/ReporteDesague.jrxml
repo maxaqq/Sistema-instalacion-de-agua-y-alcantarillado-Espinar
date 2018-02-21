@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9b5515f-7ce8-40a5-b965-cf22d5312acd">
 	<property name="ireport.zoom" value="1.3636363636363635"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="610"/>
+	<property name="ireport.y" value="560"/>
 	<parameter name="id" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[Select * from desague where id = $P{id}]]>
@@ -320,9 +320,9 @@
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
-				<text><![CDATA[=>  Excavacion de zanjas en un plazo de 03 dias habiles despues de la autorizacion.
-=> Adquisicion de materiales de accesorios solicitado por USUPAL.                                                                                                                                              => Preparado de materiales (cama) para encubrimiento de tuberias.
-=> Tapado de compactado de las Zanjas.                                                                                                                                                                                                                                                                                                                                                                                                                                 => Limpieza de la via publicadonde se realizo el trabajo]]></text>
+				<text><![CDATA[=>  Excavación de zanjas en un plazo de 03 dias hábiles despues de la autorización.
+=> Adquisición de materiales de accesorios solicitado por USAPAL.                                                                                                                                              => Preparado de materiales (cama) para encubrimiento de tuberias.
+=> Tapado de compactado de las Zanjas.                                                                                                                                                                                                                                                                                                                                                                                                                                 => Limpieza de la via publica donde se realizó el trabajo]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="38" y="308" width="479" height="15" uuid="ee100002-2ec2-4884-a4de-3d1d31829c90"/>
@@ -346,7 +346,7 @@
 				<text><![CDATA[2. Los recibos deberán ser cancelados mensualmente en caja de la Municipalidad Provincial de Espinar, dentro del plazo señalado como último día de pago precisado en el recibo.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="38" y="381" width="479" height="44" uuid="03a39217-9927-4b81-98ac-9cbd40cca697"/>
+				<reportElement x="38" y="381" width="517" height="44" uuid="03a39217-9927-4b81-98ac-9cbd40cca697"/>
 				<textElement>
 					<font fontName="Arial Narrow" size="12"/>
 				</textElement>
@@ -416,7 +416,7 @@
 				<text><![CDATA["]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="491" y="35" width="13" height="20" uuid="37475828-cd75-4dd5-a0bc-07670d1641c6"/>
+				<reportElement x="475" y="35" width="13" height="20" uuid="37475828-cd75-4dd5-a0bc-07670d1641c6"/>
 				<text><![CDATA["]]></text>
 			</staticText>
 			<rectangle radius="10">
@@ -492,7 +492,7 @@
 				<textFieldExpression><![CDATA[$F{proyecto}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="255" y="518" width="273" height="20" uuid="2cb4fc24-ce7a-4650-96a8-3b414d6fcbf7"/>
+				<reportElement x="175" y="518" width="353" height="20" uuid="2cb4fc24-ce7a-4650-96a8-3b414d6fcbf7"/>
 				<textElement>
 					<font fontName="Times New Roman" size="13" isBold="true"/>
 				</textElement>
