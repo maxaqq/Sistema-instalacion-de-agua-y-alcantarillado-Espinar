@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a9b5515f-7ce8-40a5-b965-cf22d5312acd">
 	<property name="ireport.zoom" value="1.3636363636363635"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="560"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="id" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[Select * from desague where id = $P{id}]]>
@@ -272,7 +272,7 @@
 				<text><![CDATA[LOTE:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="463" y="35" width="100" height="20" uuid="fb86815f-35cf-472e-bccc-02c0c3565bcb"/>
+				<reportElement x="458" y="35" width="100" height="20" uuid="fb86815f-35cf-472e-bccc-02c0c3565bcb"/>
 				<textElement>
 					<font fontName="Times New Roman" size="13"/>
 				</textElement>
