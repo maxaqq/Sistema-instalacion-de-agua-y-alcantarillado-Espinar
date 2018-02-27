@@ -1474,10 +1474,10 @@ public class formulario extends javax.swing.JFrame {
 
     private void jTextReciboCajaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextReciboCajaKeyTyped
         // TODO add your handling code here:
-         char c = evt.getKeyChar();
-        if(c<'0' || c>'9')evt.consume();
+       /*  char c = evt.getKeyChar();
+        if((c<'0' || c>'9') && c== '-')evt.consume();
         if((c<'a' || c>'z') && (c<'A' || c>'Z') && (c<' ' || c>' '));
-        else{JOptionPane.showMessageDialog(null, "Ingrese solo numeros");}
+        else{JOptionPane.showMessageDialog(null, "Ingrese solo numeros");}*/
     }//GEN-LAST:event_jTextReciboCajaKeyTyped
 
     private void jTextDNIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextDNIKeyTyped
